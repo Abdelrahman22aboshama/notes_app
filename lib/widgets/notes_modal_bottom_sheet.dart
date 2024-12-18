@@ -9,7 +9,8 @@ class NotesModalBottomSheet extends StatelessWidget {
     return  Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16),
       child: Column(
-        children: [
+        children: [ 
+          
           SizedBox(height: 32,),
           CustomTextField(),
         ],
