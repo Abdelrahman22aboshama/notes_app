@@ -1,9 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:notes_app/views/notes_view.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 
-void main(){
-  runApp(NotesApp());
+void main() async{
+ await Hive.initFlutter();
+ await Hive.openBox('NotesBox');
+  runApp(const NotesApp());
 }
 class NotesApp extends StatelessWidget {
   const NotesApp({super.key});
